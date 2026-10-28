@@ -1,0 +1,39 @@
+:root {
+  --paper: #F6F1E7; --card: #FFFDF8; --ink: #2B2622; --muted: #6F665C;
+  --line: #E3D9C8; --accent: #B0382B;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #191613; --card: #23201C; --ink: #ECE4D8; --muted: #A89D8F;
+    --line: #3A332C; --accent: #E0644F;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", Roboto, sans-serif;
+  background: var(--paper); color: var(--ink); line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 72px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.seal {
+  flex: none; width: 60px; height: 60px; border-radius: 12px; background: var(--accent);
+  color: #fff; display: grid; place-items: center; transform: rotate(-4deg);
+  font: 600 30px/1 "Songti SC", Georgia, serif;
+}
+h1 { font: 700 26px/1.25 "Songti SC", Georgia, serif; }
+.sub { color: var(--muted); font-size: 15px; }
+.lang { margin: 20px 0 28px; font-size: 14px; color: var(--muted); }
+.lang a { color: var(--accent); }
+section {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 22px 22px 18px; margin-bottom: 16px;
+}
+h2 { font: 600 19px/1.4 "Songti SC", Georgia, serif; margin-bottom: 10px; }
+h3 { font-size: 16px; margin: 14px 0 4px; }
+p, li { font-size: 15.5px; }
+p + p { margin-top: 8px; }
+ul { padding-left: 20px; margin-top: 6px; }
+li + li { margin-top: 4px; }
+a { color: var(--accent); }
+.meta { color: var(--muted); font-size: 13.5px; margin-top: 28px; text-align: center; }
